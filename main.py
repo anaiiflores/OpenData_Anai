@@ -104,6 +104,7 @@ async def get_pistas(request: Request):
 async def get_pistas(request: Request):
     return FileResponse("static/cliente.html")
         
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
              
